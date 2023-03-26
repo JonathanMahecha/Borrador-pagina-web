@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicar sesion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<style>
+    body {
+        margin: 0%;
+        padding: 0%;
+        font-family: Arial, sans-serif;
+        background-color: #0d47a1;
+        ;
+        height: 100vh;
+    }
+
+    .nserviteca {
+        color: #F4D03F;
+        font-size: 10px;
+    }
+
+    .nserviteca .img {
+        width: 100px;
+        height: 100px;
+        text-align: right;
+    }
+
+
+    .formulario {
+        color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #F4D03F;
+        width: 400px;
+        border-radius: 1px;
+    }
+
+    .formulario h2 {
+        text-align: center;
+        padding: 0 0 20px 0;
+        border-bottom: 5px solid #0d47a1;
+    }
+
+    .formulario form {
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+    form .usuario {
+        position: relative;
+        border-bottom: 2px solid gray;
+        margin: 30px 0;
+    }
+
+    .usuario input {
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;
+
+    }
+
+    .usuario label {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        color: grey;
+        transform: translateY(-50%);
+        font-size: 16px;
+        pointer-events: none;
+    }
+
+    .usuario span ::before {
+        content: "";
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: rgb(228, 231, 17);
+        transition: 5s;
+    }
+
+    .usuario input:focus~label,
+    .usuario input:focus~label {
+        top: -5px;
+        color: rgb(194, 194, 193);
+    }
+
+    .usuario input:focus~span ::before,
+    .datos input:focus~span ::before {
+        width: 100%;
+    }
+
+    .reenviocontraseña {
+        margin: -5px 0 20px 5px;
+        color: #0d47a1;
+        cursor: pointer;
+    }
+
+    .reenviocontraseña :hover {
+        text-decoration: underline;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        border: 1px solid;
+        background: #0d47a1;
+        border-radius: 25px;
+        font-size: 20px;
+        color: yellow;
+        cursor: pointer;
+        outline: none;
+    }
+
+    input[type="submit"]:hover {
+        border-color: #0d47a1;
+        transition: .5s;
+    }
+
+
+    .registro a {
+        color: #0d47a1;
+        text-decoration: none;
+    }
+
+    .registro a:hover {
+        text-decoration: underline;
+    }
+
+    .formulario button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+</style>
+
+<body>
+
+    <div class="nserviteca">
+        <h1>DON SPEED'S FIERRO</h1>
+        <div class="imagen">
+            <img src="webbb icon.png" class="img" alt="">
+        </div>
+    </div>
+    <div class="formulario">
+        <h2> inicio de sesion </h2>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                    <div class="p-3 mb-2 bg-primary text-white">Direccion de email</div>
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com"
+                        value="test@example.com">
+                </label>
+                <div id="emailHelp" class="form-text">
+                    <div class="p-3 mb-2 bg-dark text-white">Nunca compartiremos su correo electrónico con nadie más.</div>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label"></label>
+                  <div class="p-3 mb-2 bg-primary text-white">Password</div>
+                </div>
+                <div class="col-auto">
+                  <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    <div class="p-3 mb-2 bg-dark text-white">Debe tener entre 8 y 20 caracteres.</div>  
+                  </span>
+                </div>
+              </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recordarme la proxima vez</label>
+            </div>
+            <div class="d-flex justify-content-center">..
+            <div>
+                <button type="button" class="btn btn-outline-danger">Recuperar contraseña</button>
+            </div>
+            <button type="button" class="btn btn-outline-primary">Cargar</button>
+            <div class="registro">
+                <button type="submit" class="btn btn-outline-primary"> ¿desea <a href="registro.html">registrarse</a>?</button>
+            </div>
+            .</div>
+        </form>
+        <!-- <form method="post">
+
+            <div class="usuario">
+                <input type="text" required>
+                <label> usuario </label>
+            </div>
+
+            <div class="usuario">
+                <input type="password" required>
+                <label> contraseña </label>
+            </div>
+            <div class="reenviocontraseña">¿olvido su contraseña?</div>
+            <input type="submit" value="iniciar sesion">
+
+            <div class="registro">
+                ¿desea <a href="registro.html">registrarse</a>?</div>
+
+
+        </form> -->
+    </div>
+
+</body>
+
+</html>
